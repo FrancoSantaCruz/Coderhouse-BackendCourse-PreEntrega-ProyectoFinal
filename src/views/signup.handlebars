@@ -1,0 +1,31 @@
+<div class="container w-50 mt-5 mb-5">
+    <div class="card text-center">
+        <div class="card-header">
+            SIGNUP
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Welcome to this new experience!</h5>
+            <form action="/api/sessions/signup" method="post">
+                <p class="card-text">First Name</p>
+                <input type="text" name="first_name" id="first_name">
+                <p class="card-text">Last Name</p>
+                <input type="text" name="last_name" id="last_name">
+                <p class="card-text">Email</p>
+                <input type="email" name="email" id="email">
+                <p class="card-text">Password</p>
+                <input type="password" name="password" id="password"><br>
+                <input type="submit" value="SINGUP" class="btn btn-primary mt-3">
+                {{!-- <a href="#" class="btn btn-primary">Go somewhere</a> --}}
+            </form>
+        </div>
+        <div class="card-footer text-body-secondary">
+            Already have an account? <a href="/login">Login here</a>
+        </div>
+        <p class="card-text">OR</p>
+        <div class="container mb-3">
+            <button onclick="location.href='/api/sessions/auth/google'">JOIN WITH GOOGLE</button>
+        </div>
+        {{!-- <div class="card-footer text-body-secondary">
+        </div> --}}
+    </div>
+</div>

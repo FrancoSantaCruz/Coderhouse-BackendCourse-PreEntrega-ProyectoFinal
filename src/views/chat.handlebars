@@ -1,0 +1,27 @@
+<div class="container w-75 mt-5">
+<ul class="list-group list-group-flush">
+    <div id="chat">
+        {{#each messages}}
+        <li class="list-group-item"><strong>{{this.autor.first_name}}:</strong> {{this.content}}</li>
+        {{/each}}
+    </div>
+</ul>
+</div>
+
+<div class="container w-50 mb-5 mt-5">
+    <form id="chatForm" data-chat="{{chat}}" style="display: flex; justify-content:center;">
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-success">Send a message</li>
+        </ul>
+        <input type="text" name="chatMessage" id="chatMessage">
+        <br>
+        <button type="submit" class="btn btn-outline-success ms-2">Enviar</button>
+    </form>
+</div>
+
+
+
+{{!-- SCRIPTS --}}
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/wsChat.js"></script>

@@ -1,0 +1,62 @@
+{{!-- <h1>All chats</h1>
+{{#if chats}}
+{{#each chats}}
+<hr>
+<div>
+    <a href="/chat/{{this._id}}">{{this.title}}</a>
+</div>
+{{/each}}
+{{else}}
+<h1>NO HAY CHATS DISPONIBLES</h1>
+{{/if}} --}}
+
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Chat with us!</h1>
+            <p class="lead fw-normal text-white-50 mb-0">Communication & Community are the keys</p>
+        </div>
+    </div>
+</header>
+<div class="container mt-5 mb-5 w-50">
+    <ol class="list-group list-group-numbered">
+        {{#if chats}}
+        {{#each chats}}
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            {{!-- <a href="/chat/{{this._id}}"> --}}
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">{{this.title}}</div>
+                </div>
+                <button class="btn btn-info"><a href="/chat/{{this._id}}"
+                        style="text-decoration: none; color: white;">JOIN</a></button>
+                {{!--
+            </a> --}}
+        </li>
+        {{/each}}
+        {{else}}
+        <h1>NO HAY CHATS DISPONIBLES</h1>
+        {{/if}}
+    </ol>
+</div>
+
+<div class="container w-50 mb-5 mt-5">
+    <form action="/chats/new" method="post" style="display: flex; justify-content:center;">
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-info">Create your chat</li>
+        </ul>
+        <input type="text" name="chatTitle">
+        <br>
+        <button type="submit" class="btn btn-info ms-2">Crear</button>
+    </form>
+</div>
+
+{{!--
+<hr>
+<div>
+    <h3>Crear nuevo chat</h3>
+    <form action="/chats/new" method="post">
+        <p>Chat's name: </p>
+        <input type="text" name="chatTitle">
+        <button type="submit">Crear</button>
+    </form>
+</div> --}}
