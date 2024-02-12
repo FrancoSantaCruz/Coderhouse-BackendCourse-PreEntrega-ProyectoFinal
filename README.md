@@ -1,10 +1,10 @@
-# Coderhouse | Backend Course <sup>final project</sup>
+# Coderhouse | Backend Course <sup>Final Project</sup>
 
 ### Alumno: Santa Cruz, Franco Agustín. 
 
 - [x] **Pre-entrega N° 01:** Cart Manager & Products Manager
 - [x] **Pre-entrega N° 02:** 
-- [ ] **Pre-entrega N° 03:**
+- [x] **Pre-entrega N° 03:** Tickets & Cart functions.
 - [ ] **Entrega Proyecto Final:**
 
 > [!NOTE]
